@@ -1,0 +1,71 @@
+<div class="modal fade" id="modaAddTimeSourse">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">添加课时</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">课程名称</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name='tc_name' value="{{cs_name}}">
+                            <input type="hidden" value="{{tc_id}}" name="tc_id"/>
+                        </div>
+                    </div>
+                    <textarea class="form-control" rows="5"></textarea>
+                    <div class="form-group">
+                        <div class="radio">
+                            <label class="col-sm-3">是否免费</label>
+                            <div class="col-sm-9">
+                                <label>
+                                    <input  type="radio"  checked='checked'>
+                                    是
+                                </label>
+                                <label >
+                                    <input  type="radio"  >
+                                    否
+                                </label>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">视频地址</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name="ct_video">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">视频分钟</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name="ct_video" value="{{lessons.ct_video_duration}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">视频秒钟</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name="ct_video">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">推荐学习时长</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name="ct_video">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-2 col-sm-offset-5">
+                            <button type="submit" class="btn btn-success">提交</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script src="../js/lib/echarts.min.js"></script>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        var option = {
+            title: {
+                text: '前端九期男女统计'
+            },
+            tooltip: {},
+            legend: {
+                data:['男女比例']
+            },
+            xAxis: {
+                data: ["男","女"]
+            },
+            yAxis: {},
+            series: [{
+                name: '比例',
+                type: 'bar',
+                data: [80, 16]
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

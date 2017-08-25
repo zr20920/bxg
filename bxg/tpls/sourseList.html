@@ -1,0 +1,37 @@
+<div>
+    <ol class="breadcrumb">
+        <li><a href="#">课程管理</a></li>
+        <li class="active">课程列表</li>
+    </ol>
+    <ul class="list-group">
+        {{each result}}
+        <li class="list-group-item">
+            <div class="media">
+                <div class="media-left media-middle">
+                    <a href="#"  cs_id='{{$value.cs_id}}'>
+                        {{if $value.cs_cover=='http://static.botue.com/images/cover/?'}}
+
+                        <img class="media-object" src=" ./imgs/timg.jpg"  alt="" width="240" height="120">
+                        {{else}}
+
+                        <img class="media-object" src=" {{$value.cs_cover}}"  alt="" width="240" height="120">
+                        {{/if}}
+
+                    </a>
+                </div>
+                <div class="media-body">
+                     <h4 class="media-heading" cs_id='{{$value.cs_id}}'>{{$value.cg_name}}
+                         <button class="btn btn-success btn-time">编辑课时</button>
+                         <button class="btn btn-primary btn-info">编辑课程信息</button>
+                     </h4>
+                    <p>讲师:----------{{$value.tc_name}}</p>
+                    <p>分类:----------{{$value.cg_name}}</p>
+                    <p></p>
+                </div>
+            </div>
+        </li>
+       {{/each}}
+    </ul>
+
+
+</div>

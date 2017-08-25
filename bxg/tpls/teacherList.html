@@ -1,0 +1,65 @@
+<div>
+    <ol class="breadcrumb">
+        <li><a href="#">讲师管理</a></li>
+        <li class="active">讲师列表</li>
+    </ol>
+    <div class="addTeacher">
+        <button class="btn btn-success btn-add">
+            添加讲师
+        </button>
+    </div>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>用户名</th>
+            <th>花名</th>
+            <th>性别</th>
+            <th>手机</th>
+            <th>邮箱</th>
+            <th>账户状态</th>
+            <th>出生年月</th>
+            <th>入职日期</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{each result v}}
+        {{if($index%2)==1}}
+        <tr class="bg-warning">
+            <td>{{v.tc_name}}</td>
+            <td>{{v.tc_roster}}</td>
+            <td>{{v.tc_gender==0?'男':'女'}}</td>
+            <td>{{v.tc_cellphone}}</td>
+            <td>{{v.tc_email}}</td>
+            <td class="td-status">{{v.tc_status==0?'注销':'启用'}}</td>
+            <td>{{v.tc_birthday}}</td>
+            <td>{{v.tc_join_date}}</td>
+            <td tc_id={{v.tc_id}} tc_status={{v.tc_status}}>
+                <button class="btn btn-success btn-show">查看</button>
+                <button class="btn btn-primary btn-edit">编辑</button>
+                <button class="btn btn-success btn-status">{{v.tc_status==1?'注销':'启用'}}</button>
+            </td>
+        </tr>
+        {{else}}
+        <tr>
+            <td>{{v.tc_name}}</td>
+            <td>{{v.tc_roster}}</td>
+            <td>{{v.tc_gender==0?'男':'女'}}</td>
+            <td>{{v.tc_cellphone}}</td>
+            <td>{{v.tc_email}}</td>
+            <td class="td-status">{{v.tc_status==0?'注销':'启用'}}</td>
+            <td>{{v.tc_birthday}}</td>
+            <td>{{v.tc_join_date}}</td>
+            <td tc_id={{v.tc_id}} tc_status={{v.tc_status}}>
+                <button class="btn btn-success btn-show">查看</button>
+                <button class="btn btn-primary btn-edit">编辑</button>
+                <button class="btn btn-success btn-status">{{v.tc_status==1?'注销':'启用'}}</button>
+            </td>
+        </tr>
+        {{/if}}
+        {{/each}}
+        </tbody>
+
+    </table>
+
+</div>

@@ -1,0 +1,45 @@
+.left {
+  background-color: skyblue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 200px;
+}
+.left .profile .img-container {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+.right {
+  background-color: yellowgreen;
+  position: absolute;
+  top: 0;
+  right: 0px;
+  left: 200px;
+  height: 100%;
+}
+.right .top {
+  background-color: white;
+  height: 60px;
+}
+.right .top div {
+  line-height: 60px;
+}
+.right .top .box-1 {
+  float: left;
+  padding-left: 10px;
+}
+.right .top .box-2 {
+  float: right;
+}
+.right .top .box-2 a {
+  height: 100%;
+  padding: 10px;
+}
+.right .content {
+  background-color: white;
+  margin-top: 30px;
+  padding: 10px;
+}
